@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build project",
+			"type": "shell",
+			"command": "npm run build",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "git-diff-request",
+			"type": "shell",
+			"command": "git --no-pager diff -- src/app/page.tsx src/components/ui/button.tsx src/lib/api/client.ts src/lib/utils.ts Mayuri_backend/routes..js",
+			"args": [],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "none"
+		}
+	]
+}

@@ -1,11 +1,14 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "";
+declare const process:
+  | undefined
+  | {
+      env?: Record<string, string | undefined>;
+    };
+
+const API_BASE_URL = "http://localhost:5000/api/demodata";
+  
 
 export async function testBackendConnection() {
-  if (!API_BASE_URL) {
-    throw new Error("Backend API URL is not configured yet.");
-  }
-
-  const response = await fetch(`${API_BASE_URL}/api/health`, {
+  const response = await fetch(`${API_BASE_URL}`, {
     method: "GET",
     headers: {
       Accept: "application/json",

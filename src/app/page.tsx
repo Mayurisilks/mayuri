@@ -25,10 +25,14 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-4">
+    <main className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+      <div className="flex w-full max-w-lg flex-col items-center gap-4 rounded-xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h1 className="text-2xl font-semibold text-slate-900">
+          Mayuri Connection Test
+        </h1>
+
         <Button
-          className="bg-[#550022] text-white hover:bg-[#44001B]"
+          className="w-full"
           onClick={handleTestConnection}
           disabled={loading}
         >
@@ -36,7 +40,7 @@ export default function Home() {
         </Button>
 
         {message && (
-          <pre className="max-w-md whitespace-pre-wrap rounded-lg border p-4 text-sm">
+          <pre className="max-h-80 w-full overflow-auto whitespace-pre-wrap rounded-lg border border-slate-200 bg-slate-50 p-4 text-left text-sm text-slate-700">
             {message}
           </pre>
         )}
